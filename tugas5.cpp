@@ -71,6 +71,21 @@ bool kata(const char* word, const char matrix[][24], int size) {
         }
     }
 
+    for (int i = 0; i < size; i++) {
+        for (int j = 0; j < size; j++) {
+            bool found = true;
+            for (int k = 0; k < panjangKata; k++) {
+                if (matrix[i - k][j - k] != word[k]) {
+                    found = false;
+                    break;
+                }
+            }
+            if (found) {
+                return true;
+            }
+        }
+    }
+
 
 int main() {
     int n;
