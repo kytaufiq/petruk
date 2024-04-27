@@ -171,6 +171,14 @@ int main() {
     for (int i = 0; i < n; i++) {
         cin.getline(words[i], 25);
         kapital(words[i]);
+    }
+
+    for(int i=0;i<n;i++){
+        if(kata(words[i],matrix,24)){
+            cout<<"Ada"<< endl;
+        }else{
+            cout<<"Tidak ada"<<endl;
+        }
     }    
-return 0;
+        return 0;
 }
